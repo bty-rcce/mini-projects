@@ -1,9 +1,19 @@
-function parity(number) {
-    if (number % 2 == 0)
-        return "Even"
-    else 
-        return "Odd"
+function acronym(sentence){
+    // get the first letter of each string
+    var acronym = "";
+
+    // split words from sentence
+    var words = sentence.split(" ");
+    console.log(words);
+    
+    // go through each word in words
+    for (i in words) {
+        // get the first letter of each string
+        letters = words[i].split("");
+        acronym += letters[0];
+    }
+    return acronym;
 }
 
-var number = prompt("Enter a Number ")
-console.log("You entered an " + parity(number) + " number!")
+// var sentence = prompt("Enter a short sentence ");
+console.log(acronym("Rovin Czar"));
